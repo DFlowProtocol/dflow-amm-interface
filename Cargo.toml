@@ -1,0 +1,13 @@
+[package]
+name = "dflow-amm-interface"
+version = "0.0.1"
+license = "Apache-2.0"
+edition = "2021"
+description = "AMM interface to integrate into dflow-core"
+keywords = ["solana", "dflow", "aggregator"]
+# Fork of jupiter-amm-interface (Apache-2.0)
+
+[dependencies]
+solana-sdk = { version = "=2.3.*" }
+anyhow = "1.0"
+ahash = "0.8"
