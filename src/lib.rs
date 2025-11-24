@@ -15,7 +15,6 @@ use solana_sdk::{account::Account, instruction::AccountMeta, pubkey::Pubkey};
 pub enum SwapMode {
     #[default]
     ExactIn,
-    ExactOut,
 }
 
 impl FromStr for SwapMode {
@@ -24,7 +23,6 @@ impl FromStr for SwapMode {
     fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
         match s {
             "ExactIn" => Ok(SwapMode::ExactIn),
-            "ExactOut" => Ok(SwapMode::ExactOut),
             _ => Err(anyhow!("{} is not a valid SwapMode", s)),
         }
     }
